@@ -1,0 +1,128 @@
+<!Doctype HTML>
+<html lang = "en">
+    <Head>
+        <Meta Charset = "UTF-8" />
+        <meta name = "viewport" content = "width = device width, initial scale = 1.0" />
+        <title> Table 001 Control.</ititle>
+        <Style>
+            body {
+                Family source: Arial, without Serrif;
+                Margin: 0;
+                Filling: 0;
+                Text alignment: Centro;
+                Background-Color: #F4F4F4;
+            }
+    
+            Header {
+                Background color: #333;
+                Color: #fff;
+                Text alignment: Centro;
+                Filling: 1em;
+            }
+    
+            Section {
+                Max-Lima: 800px;
+                Margin: 20px automatic;
+                Background-Color: #FFF;
+                Filling: 20px;
+                Border radio: 8px;
+                Box-Shadow: 0 0 10px RGBA (0, 0, 0, 0.1);
+            }
+    
+            table {
+                Width: 100%;
+                Border collapse: collapse;
+                Margin-top: 20px;
+            }
+    
+            Table, th, td {
+                Border: 1px solid #ddd;
+            }
+    
+            th, td {
+                Filling: 10px;
+                Text Alignment: Left;
+            }
+    
+            º {
+                Background-Color: #F2F2F2;
+            }
+    
+            button {
+                Filling: 10px;
+                Background-Color: #4CAF50;
+                Color: #fff;
+                Border: None;
+                Border radio: 4px;
+                Cursor: pointer;
+            }
+    
+            Button: hover {
+                Background-Color: #45A049;
+            }
+            H1 {
+            Text alignment: Centro;
+            Size online: None;
+            }
+        </style>
+    </ Ad Head>
+    <Body>
+        <Header>
+            <H1> Progressive Debt Payment Table </h1>
+        </ Header>
+    
+        <Section>
+            <Button OnClick = "Makepayment ()"> Make the payment </button>
+            <table id = "debtpaymenttable">
+                <Tead>
+                    <Tr>
+                        <Hh> Data </h>
+                        <hh> DAY </H>
+                        <Hh> Month </h>
+                        Payment Value </H>
+                        <h> remaining debt </hh>
+                    </Tr>
+                </Sead>
+                <Tbody>
+                    <!-The table lines will be added dynamically here->
+                </tbody>
+            </Table>
+        </Section>
+    
+        <Crypt>
+            VAR TotalDeBT = 4200;
+            VAR remainingdebt = TotalDeBT;
+            var PageNT = 350;
+            var currentdate = new date ();
+    
+            Makepayment function () {
+                var tablebody = document.queryselector ('#TodyTable Tbody debt');
+    
+                var Row = document.createelement ('TR');
+                var pag pedgetdate = new date (currentdate);
+                currentdate.setmonth (currentdate.getmonth () + 1);
+                rest of thebt -= paragount;
+    
+                Row.INNERHTML = `<td> $ {formDate (PageJateddate)} </td>
+                                <td> $ {pageydate.getdate ()} </td>
+                                <td> $ {Getmonthname (PageJatedDate.getMonth ())} </td>
+                                <td> R $ {PageOUnt.Tofixed (2)} </td>
+                                <td> R $ {Math.Max (remainingdebt, 0) .tofixed (2)} </td> `;
+    
+                Tablebody.appendchild (line);
+            }
+    
+            FormatDate Function (Date) {
+                var options = {year: 'numerical', month: 'numerical', day: 'numeric'};
+                Return date.
+            }
+    
+            Getmonthname function (month) {
+                var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'October', 'November', 'December''];
+                MONTHS OF RETURN [MONTH INDEX % 12]; // Make sure it ends until January after December
+            }
+        </script>
+       <a href="table002.html"> next program.</a>
+       
+    </ body>
+</html>
